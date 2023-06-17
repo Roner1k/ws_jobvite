@@ -1,0 +1,321 @@
+.ws-jv-wrap {
+  position: relative;
+  z-index: 1;
+  max-width: 1024px;
+  margin: 0 auto;
+
+  .ws-jv-filter-form {
+    column-gap: 2%;
+
+    fieldset {
+      width: 26.5%;
+      @include phone {
+        width: 100%;
+      }
+
+      &:last-child {
+        width: 14.5%;
+      }
+    }
+
+    select {
+      @include laptopM {
+        font-size: 14px;
+      }
+
+    }
+
+    .jv-select-set {
+      @include laptopM {
+        background-size: 10px 10px;
+
+      }
+    }
+
+    button[type=submit] {
+      margin-left: auto;
+      display: block;
+      @include laptopM {
+        font-size: 16px;
+        padding-left: 14px;
+        padding-right: 14px;
+        padding-bottom: 14px;
+      }
+    }
+  }
+
+  .jv-jobs-count {
+    color: $GREEN;
+  }
+
+  .jv-jobvite-post-grid {
+    .jv-job-item {
+      .jv-job-title {
+        @include fontsize(24px, 22px, 20px);
+        text-transform: uppercase;
+
+
+        a {
+          color: #000;
+          transition: all .2s ease-out;
+
+          &:hover {
+            color: $GREEN;
+          }
+        }
+
+      }
+
+      .jv-job-detail {
+        max-width: max-content;
+        width: auto;
+
+        a {
+          transition: all .2s ease-out;
+
+          &:hover {
+            color: #000;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+.ws-jobvite-single-container {
+  position: relative;
+  z-index: 1;
+}
+
+.ws-jv-inner-banner {
+  color: #fff;
+  background: url('/wp-content/uploads/2023/05/Rectangle-78.png') no-repeat 0% 100% / cover;
+  padding: 3% 0 6%;
+  @include laptopL {
+    background-position-x: 7%;
+  }
+  @include tablet {
+    padding-bottom: 3.5rem;
+  }
+
+  h1 {
+    color: #fff;
+    text-transform: uppercase;
+    @include exfontsize(56px, 48px, 46px, 40px, 32px);
+    line-height: calc(83 / 56);
+    max-width: 580px;
+    margin-bottom: 2.75rem;
+
+  }
+
+  .jv-row1 {
+    padding-top: 10px;
+    padding-bottom: 0;
+  }
+
+  .jv-row2 {
+    padding-top: 7px;
+    padding-bottom: 0;
+    display: flex;
+    flex-flow: row wrap;
+    column-gap: 2.5%;
+
+    > .et_pb_column {
+      width: 100%;
+      margin: 0 0 1.5rem;
+    }
+
+    .jv-col1 {
+      @include desktop {
+        width: 49%;
+      }
+      @include tablet {
+        padding-bottom: 2rem;
+      }
+    }
+
+    .jv-col2,
+    .jv-col3 {
+      @include desktop {
+        width: 23%;
+        padding-top: 1%;
+
+      }
+      @include tablet {
+        //width: 48.75%;
+        margin-bottom: 0;
+        width: 100%;
+        > .et_pb_module {
+          display: flex;
+          flex-flow: row wrap;
+          column-gap: 5%;
+        }
+      }
+    }
+
+
+  }
+
+  .ws-jv-back-button {
+    a {
+      border: none !important;
+      background: transparent !important;
+      color: #fff;
+      display: inline-flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      font-size: 18px;
+      padding: 10px 18px;
+      font-weight: 500;
+
+      &:before {
+        content: '';
+        display: inline-block;
+        width: 16px;
+        height: 14px;
+        opacity: 1;
+        margin-left: -1.5rem;
+        margin-bottom: 3px;
+
+        background: url('/wp-content/uploads/2023/05/chevron-left.svg') no-repeat 50% / contain;
+      }
+    }
+  }
+
+  .jv-stat {
+    margin-bottom: .5rem;
+    @include tablet {
+      width: 30%;
+    }
+    @include phone {
+      width: 47.5%;
+
+    }
+    @include phoneS {
+      width: 100%;
+
+    }
+
+  }
+
+  .jv-title,
+  .jv-value {
+    font-size: 16px;
+    color: $GREEN;
+    line-height: 1.5;
+    margin-bottom: .3rem;
+  }
+
+  .jv-value {
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 1rem;
+    font-weight: 300;
+  }
+}
+
+.ws-jv-job-content {
+  padding: 2% 0;
+
+  .et_pb_row {
+    max-width: 946px;
+  }
+
+  .jv-post-content .et_pb_text_inner {
+    text-align: left;
+
+    h2, > h3, > h4 {
+      &:first-child {
+        color: $GREEN;
+      }
+    }
+
+    h2, h3, h4, h5 {
+      line-height: 1.47;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+
+
+      &:not(:first-child) {
+        margin-top: .5rem;
+      }
+
+    }
+
+    h2 {
+      @include fontsize(32px, 28px, 24px);
+    }
+
+    h3 {
+      @include fontsize(28px, 24px, 20px);
+
+    }
+
+    h4 {
+      @include fontsize(24px, 22px, 20px);
+
+    }
+
+    h5 {
+      font-size: 18px !important;
+    }
+
+    p {
+      line-height: 1.5;
+      margin-bottom: 1rem;
+
+    }
+
+    a {
+      color: $GREEN;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    ul {
+      list-style: disc;
+      padding-left: 1.75rem;
+      padding-bottom: 1.25rem;
+
+      li {
+        line-height: 1.5;
+        margin-bottom: .25rem;
+      }
+
+      ul {
+        padding-top: .15rem;
+        padding-bottom: .15rem;
+      }
+
+    }
+  }
+
+  .ws-jv-apply-button {
+    padding: 4rem 0 5rem;
+    border-bottom: 1px solid #BFBFBF;
+    @include tablet {
+      padding: 3rem 0 4rem;
+    }
+  }
+
+  .ws-jv-social-links {
+    color: #676D70;
+
+    a {
+      svg path {
+        transition: all .2s ease-in;
+      }
+
+      &:hover {
+        svg path {
+          fill: #1CAC4D;
+        }
+      }
+    }
+
+
+
+
+  }
+}
